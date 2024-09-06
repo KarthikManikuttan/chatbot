@@ -4,8 +4,10 @@ class BuildTextWidget extends StatefulWidget {
   final String text;
   final Color? color;
   final double? size;
+  final double? letterSpacing;
   final FontWeight? weight;
   final String? family;
+  final TextAlign? align;
   const BuildTextWidget({
     super.key,
     required this.text,
@@ -13,6 +15,8 @@ class BuildTextWidget extends StatefulWidget {
     this.size,
     this.weight,
     this.family,
+    this.letterSpacing,
+    this.align,
   });
 
   @override
@@ -24,11 +28,12 @@ class _BuildTextWidgetState extends State<BuildTextWidget> {
   Widget build(BuildContext context) {
     return Text(
       widget.text,
+      textAlign: widget.align,
       style: TextStyle(
           color: widget.color ?? Colors.white,
           fontSize: widget.size ?? 15,
-          fontFamily: widget.family ?? "Denton",
-          letterSpacing: 1,
+          fontFamily: widget.family ?? "Roboto",
+          letterSpacing: widget.letterSpacing ?? 0,
           fontWeight: widget.weight ?? FontWeight.normal),
     );
   }

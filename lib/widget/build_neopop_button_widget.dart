@@ -42,6 +42,8 @@ class _BuildNeopopButtonWidgetState extends State<BuildNeopopButtonWidget> {
                 text: widget.text,
                 color: widget.textColor ?? Colors.black,
                 size: widget.size ?? 15,
+                family: "Denton",
+                letterSpacing: 1,
                 weight: widget.weight ?? FontWeight.normal),
           ),
         ),

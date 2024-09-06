@@ -1,12 +1,13 @@
 import 'package:chatbot/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
-
+  Gemini.init(apiKey: 'AIzaSyBLUF_PdnVODtQB0kO-MUNxB6vM38jOXS0');
   runApp(const MyApp());
 }
 

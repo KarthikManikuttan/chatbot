@@ -7,7 +7,7 @@ void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
-  Gemini.init(apiKey: 'AIzaSyBLUF_PdnVODtQB0kO-MUNxB6vM38jOXS0');
+  Gemini.init(apiKey: 'your-api-key');
   runApp(const MyApp());
 }
 
